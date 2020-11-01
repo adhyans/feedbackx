@@ -1,17 +1,38 @@
 import React from "react";
 import client from "./client";
 import { render } from "react-dom";
-
 import { ApolloProvider } from "@apollo/client";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
+import App from "./components/App";
 
-function App() {
+const theme = {
+  primary: "#005C96",
+  background: "#F6F8FF",
+  textColor: "#000000",
+  footerColor: "#222222",
+};
+
+const GlobalStyle = createGlobalStyle`
+  html {
+    font-size: 62.5%;
+  }
+
+  body, button, p {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+`;
+
+function Main() {
   return (
     <ApolloProvider client={client}>
-      <div>
-        <h2>My first Apollo app 🚀</h2>
-      </div>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <App />
+      </ThemeProvider>
     </ApolloProvider>
   );
 }
 
-render(<App />, document.getElementById("root"));
+render(<Main />, document.getElementById("root"));
