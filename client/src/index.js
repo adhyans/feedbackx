@@ -17,10 +17,14 @@ const GlobalStyle = createGlobalStyle`
     font-size: 62.5%;
   }
 
-  body, button, p {
+  body, button, p, h1, h2, h3, h4, h5, h6 {
     font-family: Poppins, sans-serif;
     margin: 0;
     padding: 0;
+  }
+
+  * {
+    box-sizing: border-box;
   }
 `;
 

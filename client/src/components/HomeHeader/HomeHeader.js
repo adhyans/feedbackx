@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../Logo";
 import { HomeHeaderWrapper } from "./styles";
 import { Layout } from "../common/styles";
+import { Link } from "@reach/router";
 
 function HomeHeader() {
   return (
@@ -17,7 +18,9 @@ function HomeHeader() {
           </div>
         </div>
         <div className="button">
-          <button>Try feedbackx for free</button>
+          <Link to="/join">
+            <button>Try feedbackx for free</button>
+          </Link>
         </div>
       </Layout>
     </HomeHeaderWrapper>
