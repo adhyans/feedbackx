@@ -8,17 +8,19 @@ Button.propTypes = {
   text: PropTypes.string.isRequired,
   height: PropTypes.string.isRequired,
   width: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
   link: "",
+  onClick: () => {},
 };
 
-function Button({ link, text, height, width, ...props }) {
+function Button({ link, text, height, width, onClick, ...props }) {
   return (
     <ButtonWrapper height={height} width={width} {...props}>
       <Link to={link}>
-        <button>{text}</button>
+        <button onClick={onClick}>{text}</button>
       </Link>
     </ButtonWrapper>
   );
