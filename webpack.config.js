@@ -5,9 +5,9 @@ const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  entry: "./client/src/index",
+  entry: "./src/index",
   output: {
-    path: path.resolve(__dirname, "./dist"),
+    path: path.resolve(__dirname, "./build"),
     filename: "[name]-[contenthash].js",
     chunkFilename: "[name]-[chunkhash].js",
   },
@@ -25,16 +25,22 @@ module.exports = {
           loader: "babel-loader",
         },
       },
+      {
+        test: /\.m?js/,
+        resolve: {
+          fullySpecified: false,
+        },
+      },
     ],
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: "./dist",
+    contentBase: "./build",
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: "client/index.html",
+      template: "./index.html",
     }),
     new BundleAnalyzerPlugin(),
   ],

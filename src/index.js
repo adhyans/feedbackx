@@ -1,9 +1,13 @@
 import React from "react";
-import client from "./client";
+import client from "./apolloClient";
 import { render } from "react-dom";
 import { ApolloProvider } from "@apollo/client";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
+import Amplify from "aws-amplify";
 import App from "./components/App";
+
+import awsExports from "./aws-exports";
+Amplify.configure(awsExports);
 
 const theme = {
   primary: "#005C96",
