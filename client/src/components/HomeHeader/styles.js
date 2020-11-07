@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HomeHeaderWrapper = styled.div`
   --top-padding: 2.4rem;
-  --height: 38rem;
+  --height: 40rem;
   background-color: ${(props) => props.theme.background};
   height: calc(var(--height) - var(--top-padding));
   padding-top: var(--top-padding);
@@ -12,7 +12,7 @@ export const HomeHeaderWrapper = styled.div`
     margin-top: 9rem;
 
     .title {
-      font-size: 4.4rem;
+      font-size: 4rem;
       font-weight: 700;
     }
 

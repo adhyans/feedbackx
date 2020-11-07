@@ -17,7 +17,7 @@ export const JoinWrapper = styled.div`
   .form {
     margin-top: 5rem;
     width: 59.4rem;
-    height: 64.8rem;
+    height: 56rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color: white;
     border-radius: 0.5rem;
@@ -29,5 +29,9 @@ export const JoinWrapper = styled.div`
         margin-top: 4.6rem;
       }
     }
+  }
+
+  .get-started-button {
+    margin-top: 4.6rem;
   }
 `;
