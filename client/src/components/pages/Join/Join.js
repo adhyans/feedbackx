@@ -1,6 +1,7 @@
 import React from "react";
 import { JoinWrapper } from "./styles";
 import InputWithLabel from "../../common/InputWithLabel";
+import Button from "../../common/Button";
 
 Join.propTypes = {};
 
@@ -36,6 +37,12 @@ function Join() {
             className="input-with-label"
           />
         </div>
+        <Button
+          className="get-started-button"
+          text="Get started now"
+          height="4.8rem"
+          width="30.7rem"
+        />
       </div>
     </JoinWrapper>
   );
