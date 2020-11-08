@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const JoinWrapper = styled.div`
+export const LoginWrapper = styled.div`
   background-color: ${(props) => props.theme.background};
   width: 100vw;
   height: 100vh;
@@ -17,7 +17,7 @@ export const JoinWrapper = styled.div`
   .form {
     margin-top: 5rem;
     width: 59.4rem;
-    height: 56rem;
+    height: 40rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color: white;
     border-radius: 0.5rem;
@@ -31,19 +31,7 @@ export const JoinWrapper = styled.div`
     }
   }
 
-  .get-started-button {
+  .login-button {
     margin-top: 4.6rem;
-  }
-
-  .signin-text {
-    text-align: center;
-    font-size: 1.4rem;
-    margin-top: 1.6rem;
-    cursor: pointer;
-
-    .signin {
-      text-decoration: underline;
-      color: ${(props) => props.theme.primary};
-    }
   }
 `;

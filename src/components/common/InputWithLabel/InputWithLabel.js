@@ -6,15 +6,20 @@ import Input from "../Input";
 InputWithLabel.propTypes = {
   label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  type: PropTypes.string,
 };
 
-function InputWithLabel({ label, onChange, ...props }) {
+InputWithLabel.defaultProps = {
+  type: "text",
+};
+
+function InputWithLabel({ label, onChange, type, ...props }) {
   return (
     <InputWithLabelWrapper {...props}>
       <div className="label">
         <p>{label}</p>
       </div>
-      <Input onChange={onChange} className="input" />
+      <Input onChange={onChange} type={type} className="input" />
     </InputWithLabelWrapper>
   );
 }
