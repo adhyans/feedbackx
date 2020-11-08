@@ -4,12 +4,17 @@ import { InputWrapper } from "./styles";
 
 Input.propTypes = {
   onChange: PropTypes.func.isRequired,
+  type: PropTypes.string.isRequired,
 };
 
-function Input({ onChange, ...props }) {
+Input.defaultProps = {
+  type: "text",
+};
+
+function Input({ onChange, type, ...props }) {
   return (
     <InputWrapper {...props}>
-      <input type="text" onChange={onChange} />
+      <input type={type} onChange={onChange} />
     </InputWrapper>
   );
 }

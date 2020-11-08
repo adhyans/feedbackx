@@ -1,20 +1,17 @@
 import React, { useState } from "react";
-import { JoinWrapper } from "./styles";
+import { LoginWrapper } from "./styles";
 import InputWithLabel from "../../common/InputWithLabel";
 import Button from "../../common/Button";
+import PropTypes from "prop-types";
 import { Auth } from "@aws-amplify/auth";
-import { Link } from "@reach/router";
 
-Join.propTypes = {};
+Login.propTypes = {
+  navigate: PropTypes.func.isRequired,
+};
 
-function Join() {
-  const [name, setName] = useState("");
+function Login({ navigate }) {
   const [businessEmail, setBusinessEmail] = useState("");
   const [pass, setPass] = useState("");
-
-  function onNameChange(event) {
-    setName(event.target.value);
-  }
 
   function onBusinessEmailChange(event) {
     setBusinessEmail(event.target.value);
@@ -24,51 +21,45 @@ function Join() {
     setPass(event.target.value);
   }
 
-  function join() {
-    console.log(name);
-    Auth.signUp({ username: businessEmail, password: pass }).then((res) => {
-      console.log(res);
+  function login() {
+    Auth.signIn(businessEmail, pass).then((res) => {
+      const { username = "" } = res;
+
+      if (username) {
+        navigate("/admin");
+      }
     });
   }
 
   return (
-    <JoinWrapper>
+    <LoginWrapper>
       <div className="title">
-        <p>Sign up for feedbackx</p>
+        <p>Sign in</p>
       </div>
       <div className="form">
         <div className="input-group">
-          <InputWithLabel label={"First name"} onChange={onNameChange} />
           <InputWithLabel
-            label={"Business email"}
+            label={"Email"}
             onChange={onBusinessEmailChange}
             className="input-with-label"
           />
           <InputWithLabel
-            label={"Create password"}
+            label={"Your password"}
             onChange={onPassChange}
             className="input-with-label"
             type="password"
           />
         </div>
         <Button
-          className="get-started-button"
-          text="Get started now"
+          className="login-button"
+          text="Sign In"
           height="4.8rem"
           width="30.7rem"
-          onClick={join}
+          onClick={login}
         />
-        <div className="signin-text">
-          <p>
-            Already have an account?{" "}
-            <Link to="/login">
-              <span className="signin">Sign In</span>
-            </Link>
-          </p>
-        </div>
       </div>
-    </JoinWrapper>
+    </LoginWrapper>
   );
 }
 
-export default Join;
+export default Login;
