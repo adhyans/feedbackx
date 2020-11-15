@@ -1,3 +1,4 @@
+import "react-hot-loader";
 import React from "react";
 import client from "./apolloClient";
 import { render } from "react-dom";
@@ -17,6 +18,13 @@ const theme = {
 };
 
 const GlobalStyle = createGlobalStyle`
+  :root {
+    --primary: #005C96;
+    --background: #F6F8FF;
+    --textColor: #000000;
+    --footerColor: #222222;
+  }
+
   html {
     font-size: 62.5%;
   }

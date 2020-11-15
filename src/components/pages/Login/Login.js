@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import { Auth } from "@aws-amplify/auth";
 
 Login.propTypes = {
-  navigate: PropTypes.func.isRequired,
+  navigate: PropTypes.func,
 };
 
 function Login({ navigate }) {
