@@ -1,4 +1,5 @@
 import React from "react";
+import { hot } from "react-hot-loader/root";
 import { Router } from "@reach/router";
 import Home from "./pages/Home";
 import Join from "./pages/Join";
@@ -16,4 +17,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default hot(App);
