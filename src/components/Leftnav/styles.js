@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const LeftnavWrapper = styled.div`
-  width: 30%;
+  width: 40rem;
   background: var(--background, "#000");
   height: 100vh;
 
@@ -20,7 +20,7 @@ export const LeftnavWrapper = styled.div`
 
     .name {
       font-weight: 500;
-      font-size: 3.2rem;
+      font-size: 2.4rem;
       font-weight: Semibold;
       margin-left: 1.4rem;
     }

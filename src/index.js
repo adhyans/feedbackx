@@ -35,6 +35,10 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
 
+  input {
+    font-family: Poppins, sans-serif;
+  }
+
   * {
     box-sizing: border-box;
   }
