@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { AdminWrapper } from "./styles";
 import { Auth } from "@aws-amplify/auth";
 import Leftnav from "../../Leftnav";
+import Team from "../../Team";
 
 Admin.propTypes = {};
 
@@ -21,6 +22,7 @@ function Admin() {
   return (
     <AdminWrapper>
       <Leftnav />
+      <Team />
     </AdminWrapper>
   );
 }

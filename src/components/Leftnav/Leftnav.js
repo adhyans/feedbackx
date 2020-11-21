@@ -31,7 +31,7 @@ Leftnav.defaultProps = {
       Icon: Org,
     },
     {
-      label: "Accout Settings",
+      label: "Account Settings",
       Icon: Settings,
     },
   ],
