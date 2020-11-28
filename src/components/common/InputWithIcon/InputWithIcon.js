@@ -5,7 +5,7 @@ import Input from "../Input";
 
 InputWithIcon.propTypes = {
   height: PropTypes.string,
-  Icon: PropTypes.node.isRequired,
+  Icon: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
 };
 
@@ -17,7 +17,7 @@ function InputWithIcon({ height, placeholder, Icon }) {
   return (
     <InputWithIconWrapper>
       <Icon width="24" height="24" className="icon" />
-      <Input height={height} placeholder={placeholder} />
+      <Input height={height} placeholder={placeholder} onChange={() => {}} />
     </InputWithIconWrapper>
   );
 }
