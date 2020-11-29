@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Add from "../../Icons/Add";
 import { TeamWrapper } from "./styles";
 import FlatButton from "../common/FlatButton/FlatButton";
@@ -6,21 +6,35 @@ import Divider from "../common/Divider/Divider";
 import TeamCard from "../TeamCard";
 import InputWithIcon from "../common/InputWithIcon";
 import MagnifyingGlass from "../../Icons/MagnifyingGlass";
+import Modal from "../common/Modal";
 
 Team.propTypes = {};
 
 function Team() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <TeamWrapper>
       <div className="header">
         <div className="add">
           <Add width="28" height="28" />
           <FlatButton
+            onClick={() => {
+              setIsModalOpen(true);
+            }}
             width="12.6rem"
             height="3.2rem"
             text="Add team"
             className="add-team"
           />
+          <Modal
+            isOpen={isModalOpen}
+            onClose={() => {
+              setIsModalOpen(false);
+            }}
+          >
+            Hello, I am Modal
+          </Modal>
         </div>
         <InputWithIcon
           height="4rem"
