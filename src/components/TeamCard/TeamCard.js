@@ -5,7 +5,7 @@ import { TeamCardWrapper } from "./styles";
 TeamCard.propTypes = {
   name: PropTypes.string.isRequired,
   manager: PropTypes.string.isRequired,
-  count: PropTypes.string.isRequired,
+  count: PropTypes.number.isRequired,
 };
 
 function TeamCard({ name, manager, count, ...props }) {

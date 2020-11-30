@@ -1,43 +1,46 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createTodo = /* GraphQL */ `
-  mutation CreateTodo(
-    $input: CreateTodoInput!
-    $condition: ModelTodoConditionInput
+export const createTeam = /* GraphQL */ `
+  mutation CreateTeam(
+    $input: CreateTeamInput!
+    $condition: ModelTeamConditionInput
   ) {
-    createTodo(input: $input, condition: $condition) {
+    createTeam(input: $input, condition: $condition) {
       id
-      name
-      description
+      manager_name
+      team_name
+      member_count
       createdAt
       updatedAt
     }
   }
 `;
-export const updateTodo = /* GraphQL */ `
-  mutation UpdateTodo(
-    $input: UpdateTodoInput!
-    $condition: ModelTodoConditionInput
+export const updateTeam = /* GraphQL */ `
+  mutation UpdateTeam(
+    $input: UpdateTeamInput!
+    $condition: ModelTeamConditionInput
   ) {
-    updateTodo(input: $input, condition: $condition) {
+    updateTeam(input: $input, condition: $condition) {
       id
-      name
-      description
+      manager_name
+      team_name
+      member_count
       createdAt
       updatedAt
     }
   }
 `;
-export const deleteTodo = /* GraphQL */ `
-  mutation DeleteTodo(
-    $input: DeleteTodoInput!
-    $condition: ModelTodoConditionInput
+export const deleteTeam = /* GraphQL */ `
+  mutation DeleteTeam(
+    $input: DeleteTeamInput!
+    $condition: ModelTeamConditionInput
   ) {
-    deleteTodo(input: $input, condition: $condition) {
+    deleteTeam(input: $input, condition: $condition) {
       id
-      name
-      description
+      manager_name
+      team_name
+      member_count
       createdAt
       updatedAt
     }

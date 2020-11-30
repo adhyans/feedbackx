@@ -23,6 +23,22 @@ const GlobalStyle = createGlobalStyle`
     --background: #F6F8FF;
     --textColor: #000000;
     --footerColor: #222222;
+    --lightGrey: #e8e6e6;
+    --size4: 0.4rem;
+    --size8: 0.8rem;
+    --size12: 1.2rem;
+    --size16: 1.6rem;
+    --size20: 2rem;
+    --size24: 2.4rem;
+    --size28: 2.8rem;
+    --size32: 3.2rem;
+    --size36: 3.6rem;
+    --size40: 4rem;
+    --size44: 4.4rem;
+    --size48: 4.8rem;
+    --size52: 5.2rem;
+    --size56: 5.6rem;
+    --size60: 6rem;
   }
 
   html {

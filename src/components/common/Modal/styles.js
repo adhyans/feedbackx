@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const ModalWrapper = styled.div`
   background-color: #fff;
-  height: 50rem;
-  width: 50rem;
+  width: 48rem;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -11,10 +10,19 @@ export const ModalWrapper = styled.div`
   padding: 2rem;
   z-index: 1000;
 
-  .cross-icon {
-    position: absolute;
-    right: 2rem;
-    cursor: pointer;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      font-size: var(--size28);
+      font-weight: 500;
+    }
+
+    .cross-icon {
+      cursor: pointer;
+    }
   }
 `;
 

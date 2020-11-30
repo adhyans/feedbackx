@@ -1,8 +1,8 @@
 projects:
-  signup:
-    schemaPath: amplify/backend/api/signup/build/schema.graphql
+  feedbackx:
+    schemaPath: amplify/backend/api/feedbackx/build/schema.graphql
     includes:
-      - 'y'
+      - src/graphql/**/*.js
     excludes:
       - ./amplify/**
     extensions:
@@ -10,6 +10,9 @@ projects:
         codeGenTarget: javascript
         generatedFileName: ''
         docsFilePath: src/graphql
+        region: ap-south-1
+        apiId: null
+        maxDepth: 2
 extensions:
   amplify:
     version: 3
