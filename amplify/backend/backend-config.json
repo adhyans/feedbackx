@@ -1,6 +1,6 @@
 {
   "api": {
-    "signup": {
+    "feedbackx": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
@@ -9,7 +9,7 @@
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
               "apiKeyExpirationDays": 7,
-              "description": "Api for singning up the users on the app"
+              "description": ""
             }
           },
           "additionalAuthenticationProviders": []

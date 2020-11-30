@@ -3,20 +3,21 @@ import React from "react";
 import PropTypes from "prop-types";
 import Cross from "../../../Icons/Cross";
 import { ModalWrapper, Overlay } from "./styles";
+import Divider from "../Divider";
 
 Modal.propTypes = {
   children: PropTypes.node.isRequired,
-  isOpen: PropTypes.func,
+  isOpen: PropTypes.bool.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 Modal.defaultProps = {
-  isOpen: () => {},
   onClose: () => {},
 };
 
 let modalRoot = null;
 
-function Modal({ isOpen, onClose, children }) {
+function Modal({ isOpen, onClose, children, title }) {
   if (modalRoot === null) {
     modalRoot = document.createElement("div");
     document.body.appendChild(modalRoot);
@@ -34,12 +35,16 @@ function Modal({ isOpen, onClose, children }) {
     <>
       <Overlay></Overlay>
       <ModalWrapper>
-        <Cross
-          width="24"
-          height="24"
-          onClick={onCloseModal}
-          className="cross-icon"
-        />
+        <div className="header">
+          <p className="title">{title}</p>
+          <Cross
+            width="24"
+            height="24"
+            onClick={onCloseModal}
+            className="cross-icon"
+          />
+        </div>
+        <Divider color="#e8e6e6" />
         {children}
       </ModalWrapper>
     </>,

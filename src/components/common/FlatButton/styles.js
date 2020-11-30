@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const FlatButtonWrapper = styled.div`
-  text-align: center;
   height: ${({ height }) => (height ? height : 0)};
 
   button {

@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import FlatButton from "../common/FlatButton";
+import Input from "../common/Input";
 
 export const TeamWrapper = styled.div`
-  padding: 3.2rem;
+  padding: var(--size32);
   width: 100%;
 
   .header {
@@ -14,13 +16,25 @@ export const TeamWrapper = styled.div`
       align-items: center;
 
       .add-team {
-        margin-left: 2rem;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin-left: var(--size20);
+        box-shadow: 0px var(--size4) var(--size4) rgba(0, 0, 0, 0.25);
       }
     }
   }
 
   .team-card {
-    margin-top: 3.2rem;
+    margin-top: var(--size32);
   }
+`;
+
+export const InputWrapper = styled(Input)`
+  margin-top: var(--size32);
+
+  input {
+    font-size: var(--size20);
+  }
+`;
+
+export const ButtonWrapper = styled(FlatButton)`
+  margin-top: var(--size32);
 `;
